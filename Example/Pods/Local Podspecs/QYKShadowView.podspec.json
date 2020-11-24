@@ -1,0 +1,22 @@
+{
+  "name": "QYKShadowView",
+  "version": "1.2.0",
+  "summary": "An easy way to use shadow / cornerRadius",
+  "homepage": "https://github.com/yotrolz/QYKShadowView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yotrolz": "207213149@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/yotrolz/QYKShadowView.git",
+    "tag": "1.2.0"
+  },
+  "source_files": "QYKShadowView/Classes/**/*",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true
+}

@@ -2,12 +2,7 @@ use_frameworks!
 
 platform :ios, '8.0'
 
-target 'YCShadowView_Example' do
-  pod 'YCShadowView', :path => '../'
+target 'QYKShadowView_Example' do
+  pod 'QYKShadowView', :path => '../'
   pod 'Masonry'
-  target 'YCShadowView_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

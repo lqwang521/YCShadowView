@@ -1,23 +1,23 @@
 PODS:
   - Masonry (1.1.0)
-  - YCShadowView (1.2.0)
+  - QYKShadowView (1.2.0)
 
 DEPENDENCIES:
   - Masonry
-  - YCShadowView (from `../`)
+  - QYKShadowView (from `../`)
 
 SPEC REPOS:
   trunk:
     - Masonry
 
 EXTERNAL SOURCES:
-  YCShadowView:
+  QYKShadowView:
     :path: "../"
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  YCShadowView: cbd3215cefcd2a985ce3827e9f32152609968480
+  QYKShadowView: 5c360a4fc1660d7eb4c593fd9da1975fec7b500d
 
-PODFILE CHECKSUM: bd26295d6e46520dd56f67273acff916732c7d6b
+PODFILE CHECKSUM: d84f61ecc560403d3e0690e8b1a113a53158d30d
 
 COCOAPODS: 1.9.3
