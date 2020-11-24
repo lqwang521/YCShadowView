@@ -237,6 +237,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = yotrolz;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = NG36FB5SUR;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -470,12 +473,13 @@
 			baseConfigurationReference = 6E702212424F157FEBA5B720 /* Pods-QYKShadowView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NG36FB5SUR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QYKShadowView/QYKShadowView_Example-Prefix.pch";
 				INFOPLIST_FILE = "QYKShadowView/QYKShadowView_Example-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiyi.wlq2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -486,12 +490,13 @@
 			baseConfigurationReference = F4C728FDD58029F8DB25AEFF /* Pods-QYKShadowView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NG36FB5SUR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QYKShadowView/QYKShadowView_Example-Prefix.pch";
 				INFOPLIST_FILE = "QYKShadowView/QYKShadowView_Example-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qiyi.wlq2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

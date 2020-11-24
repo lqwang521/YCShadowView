@@ -22,7 +22,7 @@
 /// 边角
 @property(nonatomic, assign) UIRectCorner   rectCorner;
 
-@property(nonatomic, strong)UIView          *backContentView;
+@property(nonatomic, strong)UIImageView     *backContentView;
 
 @property(nonatomic, strong)CALayer         *topShadowLayer;
 @property(nonatomic, strong)CALayer         *botShadowLayer;
@@ -50,7 +50,7 @@
 
 #pragma mark - override 重载父类的方法
 - (void)setBackgroundColor:(UIColor *)backgroundColor {
-    self.backContentView.backgroundColor = backgroundColor;
+    self.backContentView.layer.backgroundColor = backgroundColor.CGColor;
 }
 
 - (void)addSubview:(UIView *)view {
@@ -287,12 +287,13 @@
 }
 
 #pragma mark - Setter/Getter Methods set/get方法
-- (UIView *)backContentView {
+- (UIImageView *)backContentView {
     if (!_backContentView) {
-        _backContentView = [[UIView alloc] init];
-        _backContentView.backgroundColor = [UIColor whiteColor];
-        _backContentView.layer.masksToBounds = YES;
-        _backContentView.clipsToBounds = YES;
+        _backContentView = [[UIImageView alloc] init];
+        _backContentView.layer.backgroundColor = [UIColor whiteColor].CGColor;
+        _backContentView.userInteractionEnabled = YES;
+        //        _backContentView.layer.masksToBounds = YES;
+        //        _backContentView.clipsToBounds = YES;
         [self insertSubview:_backContentView atIndex:0];
     }
     return _backContentView;
