@@ -9,6 +9,7 @@
 #import "YCViewController.h"
 
 #import <YCShadowView/YCShadowView.h>
+#import <Masonry/Masonry.h>
 
 @interface YCViewController ()
 
@@ -25,7 +26,7 @@
     [self.view addSubview:scroll];
     
     /// 圆角 + 阴影
-    YCShadowView *v1 = [[YCShadowView alloc] initWithFrame:CGRectMake(50, 100, 100, 100)];
+    YCShadowView *v1 = [[YCShadowView alloc] initWithFrame:CGRectZero];
     v1.backgroundColor = [UIColor whiteColor];
     [v1 yc_shaodw];
     [v1 yc_cornerRadius:10];
@@ -37,9 +38,19 @@
     label1.textAlignment = NSTextAlignmentCenter;
     [v1 addSubview:label1];
     [scroll addSubview:v1];
+    [v1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(scroll.mas_left).offset(50);
+        make.top.equalTo(scroll.mas_top).offset(100);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(100);
+    }];
+    
+    [label1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(v1);
+    }];
     
     /// 单个圆角 + 阴影
-    YCShadowView *v2 = [[YCShadowView alloc] initWithFrame:CGRectMake(200, 100, 100, 100)];
+    YCShadowView *v2 = [[YCShadowView alloc] initWithFrame:CGRectZero];
     v2.backgroundColor = [UIColor whiteColor];
     [v2 yc_shaodwRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(YCShadowSideAllSides)];
     [v2 yc_cornerRadius:10 byRoundingCorners:(UIRectCornerTopLeft)];
@@ -51,9 +62,18 @@
     label2.textAlignment = NSTextAlignmentCenter;
     [v2 addSubview:label2];
     [scroll addSubview:v2];
+    [v2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(scroll.mas_left).offset(200);
+        make.top.equalTo(scroll.mas_top).offset(100);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(100);
+    }];
+    [label2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(v2);
+    }];
     
     /// 上下阴影 + 单个圆角
-    YCShadowView *v3 = [[YCShadowView alloc] initWithFrame:CGRectMake(50, 250, 100, 100)];
+    YCShadowView *v3 = [[YCShadowView alloc] initWithFrame:CGRectZero];
     v3.backgroundColor = [UIColor whiteColor];
     [v3 yc_verticalShaodwRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeZero];
     [v3 yc_cornerRadius:10 byRoundingCorners:(UIRectCornerTopRight)];
@@ -65,9 +85,18 @@
     label3.textAlignment = NSTextAlignmentCenter;
     [v3 addSubview:label3];
     [scroll addSubview:v3];
+    [v3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(scroll.mas_left).offset(50);
+        make.top.equalTo(scroll.mas_top).offset(250);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(100);
+    }];
+    [label3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(v3);
+    }];
     
     /// 单边阴影 + 单个圆角
-    YCShadowView *v4 = [[YCShadowView alloc] initWithFrame:CGRectMake(200, 250, 100, 100)];
+    YCShadowView *v4 = [[YCShadowView alloc] initWithFrame:CGRectZero];
     v4.backgroundColor = [UIColor whiteColor];
     [v4 yc_shaodwRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(YCShadowSideRight)];
     [v4 yc_cornerRadius:10 byRoundingCorners:(UIRectCornerBottomLeft)];
@@ -79,9 +108,18 @@
     label4.textAlignment = NSTextAlignmentCenter;
     [v4 addSubview:label4];
     [scroll addSubview:v4];
+    [v4 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(scroll.mas_left).offset(200);
+        make.top.equalTo(scroll.mas_top).offset(250);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(100);
+    }];
+    [label4 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(v4);
+    }];
     
     /// 上边阴影 + 上边圆角
-    YCShadowView *v5 = [[YCShadowView alloc] initWithFrame:CGRectMake(50, 400, 100, 100)];
+    YCShadowView *v5 = [[YCShadowView alloc] initWithFrame:CGRectZero];
     v5.backgroundColor = [UIColor whiteColor];
     [v5 yc_shaodwRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(YCShadowSideTop)];
     [v5 yc_cornerRadius:10 byRoundingCorners:(UIRectCornerTopLeft|UIRectCornerTopRight)];
@@ -93,13 +131,22 @@
     label5.textAlignment = NSTextAlignmentCenter;
     [v5 addSubview:label5];
     [scroll addSubview:v5];
+    [v5 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(scroll.mas_left).offset(50);
+        make.top.equalTo(scroll.mas_top).offset(400);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(100);
+    }];
+    [label5 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(v5);
+    }];
     
     /// 下边阴影 + 下边圆角
     YCShadowView *v6 = [[YCShadowView alloc] initWithFrame:CGRectMake(200, 400, 100, 100)];
     v6.backgroundColor = [UIColor whiteColor];
     [v6 yc_shaodwRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(YCShadowSideBottom)];
     [v6 yc_cornerRadius:10 byRoundingCorners:(UIRectCornerBottomLeft|UIRectCornerBottomRight)];
-    UILabel *label6 = [[UILabel alloc] initWithFrame:v2.bounds];
+    UILabel *label6 = [[UILabel alloc] initWithFrame:v6.bounds];
     label6.text = @"下边阴影\n下边圆角";
     label6.numberOfLines = 2;
     label6.textColor = [UIColor darkGrayColor];
@@ -108,8 +155,8 @@
     [v6 addSubview:label6];
     [scroll addSubview:v6];
     
-    CGFloat h = v6.frame.origin.y + 200 < self.view.bounds.size.height ? self.view.bounds.size.height+1 : v6.frame.origin.y + 200;
-    scroll.contentSize = CGSizeMake(self.view.bounds.size.width, h);
+    //CGFloat h = v6.frame.origin.y + 200 < self.view.bounds.size.height ? self.view.bounds.size.height+1 : v6.frame.origin.y + 200;
+    scroll.contentSize = CGSizeMake(self.view.bounds.size.width, 500);
     
 }
 
