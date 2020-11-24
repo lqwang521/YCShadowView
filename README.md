@@ -18,8 +18,8 @@
 ```Objc
 QYKShadowView *view = [[QYKShadowView alloc] initWithFrame:CGRectMake(200, 250, 100, 100)];
 view.backgroundColor = [UIColor whiteColor];
-[view yc_shadowRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(YCShadowSideRight)];
-[view yc_cornerRadius:10 byRoundingCorners:(UIRectCornerBottomLeft)];
+[view qyk_shadowRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(QYKShadowSideRight)];
+[view qyk_cornerRadius:10 byRoundingCorners:(UIRectCornerBottomLeft)];
 ```
 
 ## Author

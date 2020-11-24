@@ -28,8 +28,8 @@
     /// 圆角 + 阴影
     QYKShadowView *v1 = [[QYKShadowView alloc] initWithFrame:CGRectZero];
     v1.backgroundColor = [UIColor whiteColor];
-    [v1 yc_shadow];
-    [v1 yc_cornerRadius:10];
+    [v1 qyk_shadow];
+    [v1 qyk_cornerRadius:10];
     UILabel *label1 = [[UILabel alloc] initWithFrame:v1.bounds];
     label1.text = @"四周阴影\n四周圆角";
     label1.numberOfLines = 2;
@@ -52,8 +52,8 @@
     /// 单个圆角 + 阴影
     QYKShadowView *v2 = [[QYKShadowView alloc] initWithFrame:CGRectZero];
     v2.backgroundColor = [UIColor whiteColor];
-    [v2 yc_shadowRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(YCShadowSideAllSides)];
-    [v2 yc_cornerRadius:10 byRoundingCorners:(UIRectCornerTopLeft)];
+    [v2 qyk_shadowRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(QYKShadowSideAllSides)];
+    [v2 qyk_cornerRadius:10 byRoundingCorners:(UIRectCornerTopLeft)];
     UILabel *label2 = [[UILabel alloc] initWithFrame:v2.bounds];
     label2.text = @"四周阴影\n单个圆角";
     label2.numberOfLines = 2;
@@ -75,8 +75,8 @@
     /// 上下阴影 + 单个圆角
     QYKShadowView *v3 = [[QYKShadowView alloc] initWithFrame:CGRectZero];
     v3.backgroundColor = [UIColor whiteColor];
-    [v3 yc_verticalShadowRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeZero];
-    [v3 yc_cornerRadius:10 byRoundingCorners:(UIRectCornerTopRight)];
+    [v3 qyk_verticalShadowRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeZero];
+    [v3 qyk_cornerRadius:10 byRoundingCorners:(UIRectCornerTopRight)];
     UILabel *label3 = [[UILabel alloc] initWithFrame:v2.bounds];
     label3.text = @"上下阴影\n单个圆角";
     label3.numberOfLines = 2;
@@ -98,8 +98,8 @@
     /// 单边阴影 + 单个圆角
     QYKShadowView *v4 = [[QYKShadowView alloc] initWithFrame:CGRectZero];
     v4.backgroundColor = [UIColor whiteColor];
-    [v4 yc_shadowRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(YCShadowSideRight)];
-    [v4 yc_cornerRadius:10 byRoundingCorners:(UIRectCornerBottomLeft)];
+    [v4 qyk_shadowRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(QYKShadowSideRight)];
+    [v4 qyk_cornerRadius:10 byRoundingCorners:(UIRectCornerBottomLeft)];
     UILabel *label4 = [[UILabel alloc] initWithFrame:v2.bounds];
     label4.text = @"单边阴影\n单个圆角";
     label4.numberOfLines = 2;
@@ -121,8 +121,8 @@
     /// 上边阴影 + 上边圆角
     QYKShadowView *v5 = [[QYKShadowView alloc] initWithFrame:CGRectZero];
     v5.backgroundColor = [UIColor whiteColor];
-    [v5 yc_shadowRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(YCShadowSideTop)];
-    [v5 yc_cornerRadius:10 byRoundingCorners:(UIRectCornerTopLeft|UIRectCornerTopRight)];
+    [v5 qyk_shadowRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(QYKShadowSideTop)];
+    [v5 qyk_cornerRadius:10 byRoundingCorners:(UIRectCornerTopLeft|UIRectCornerTopRight)];
     UILabel *label5 = [[UILabel alloc] initWithFrame:v2.bounds];
     label5.text = @"上边阴影\n上边圆角";
     label5.numberOfLines = 2;
@@ -144,8 +144,8 @@
     /// 下边阴影 + 下边圆角
     QYKShadowView *v6 = [[QYKShadowView alloc] initWithFrame:CGRectMake(200, 400, 100, 100)];
     v6.backgroundColor = [UIColor whiteColor];
-    [v6 yc_shadowRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(YCShadowSideBottom)];
-    [v6 yc_cornerRadius:10 byRoundingCorners:(UIRectCornerBottomLeft|UIRectCornerBottomRight)];
+    [v6 qyk_shadowRadius:10 shadowColor:[UIColor colorWithWhite:0 alpha:0.5] shadowOffset:CGSizeMake(0, 0) byShadowSide:(QYKShadowSideBottom)];
+    [v6 qyk_cornerRadius:10 byRoundingCorners:(UIRectCornerBottomLeft|UIRectCornerBottomRight)];
     UILabel *label6 = [[UILabel alloc] initWithFrame:v6.bounds];
     label6.text = @"下边阴影\n下边圆角";
     label6.numberOfLines = 2;
